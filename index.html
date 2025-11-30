@@ -4,119 +4,88 @@
     <meta charset="utf-8" />
     <title>Q2 Quarterly Earnings – Interactive Report</title>
 
-    <!-- RevealJS core + theme (from CDN) -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css"
-      id="theme"
-    />
+    <!-- RevealJS core + theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" id="theme" />
 
     <!-- Code highlighting theme -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css" />
 
     <style>
-      /* Custom styling */
       .reveal {
         font-family: "Arial", sans-serif;
       }
-
       .kpi {
         font-size: 1.4rem;
         margin-top: 1rem;
       }
-
       .kpi span.value {
         font-weight: bold;
       }
     </style>
   </head>
+
   <body>
     <div class="reveal">
       <div class="slides">
-        <!-- SLIDE 1: Title -->
+
+        <!-- SLIDE 1 (email included here) -->
         <section>
           <h1>Q2 Quarterly Earnings Report</h1>
           <h3>Interactive Technical Presentation</h3>
-          <p>
-            Technical Consultant – Major Financial Institution
-          </p>
-          <p>
-            Contact:
-            <strong>23f3001440@ds.study.iitm.ac.in</strong>
-          </p>
+          <p><strong>Technical Consultant – Major Financial Institution</strong></p>
+          <p><strong>Email: 23f3001440@ds.study.iitm.ac.in</strong></p>
 
           <aside class="notes">
-            Introduce yourself as the technical consultant. Mention that this
-            deck demonstrates modern interactive reporting capabilities using
-            RevealJS: code, math, and data visualizations.
+            Introduce your role and mention that this deck demonstrates modern interactive reporting with RevealJS.
           </aside>
         </section>
 
-        <!-- SLIDE 2: Markdown slide (REQUIRED) -->
+        <!-- SLIDE 2 - MARKDOWN SLIDE -->
         <section data-markdown>
           <textarea data-template>
 ## Agenda
 
-- **Business Overview**
-- **Key Financial Metrics**
-- **Interactive Revenue Analysis**
-- **Risk & Sensitivity**
-- **Implementation Notes (RevealJS, GitHub Pages)**
+- Business Overview
+- Key Financial Metrics
+- Revenue Growth Analysis
+- Risk & Sensitivity
+- Technology Stack (RevealJS, GitHub Pages)
 
 ---
 
-## Why Interactive?
+## Why Interactive Presentation?
 
-- Stakeholders can **see code** that produced the numbers
-- **Live / embeddable charts** for future automation
-- Clear **audit trail** between assumptions, formulas, and outputs
+- Clear audit trail between assumptions → formulas → output
+- Code and math visible to stakeholders
+- Live data visualization ready (future automation)
           </textarea>
 
           <aside class="notes">
-            Call out that this slide is fully written in Markdown. Mention that
-            content can be generated directly from .md files or CI pipelines in
-            the future.
+            Mention that this slide is completely Markdown-powered using Reveal markdown plugin.
           </aside>
         </section>
 
-        <!-- SLIDE 3: Financial KPIs with fragments (ANIMATED) -->
+        <!-- SLIDE 3 - KPI WITH FRAGMENTS -->
         <section>
           <h2>Key Financial Highlights</h2>
-          <p class="kpi fragment">
-            Revenue: <span class="value">$1.25B</span> <span>(+12% YoY)</span>
-          </p>
-          <p class="kpi fragment">
-            Net Income: <span class="value">$210M</span> <span>(+8% YoY)</span>
-          </p>
-          <p class="kpi fragment fade-up">
-            EPS: <span class="value">$1.45</span> <span>(+6% YoY)</span>
-          </p>
-          <p class="kpi fragment fade-up">
-            ROE: <span class="value">14.2%</span>
-          </p>
+          <p class="kpi fragment">Revenue: <span class="value">$1.25B</span> (+12% YoY)</p>
+          <p class="kpi fragment">Net Income: <span class="value">$210M</span> (+8% YoY)</p>
+          <p class="kpi fragment fade-up">EPS: <span class="value">$1.45</span> (+6% YoY)</p>
+          <p class="kpi fragment fade-up">ROE: <span class="value">14.2%</span></p>
 
           <aside class="notes">
-            Reveal the metrics one by one to keep focus. Tie each metric to a
-            short story: revenue driven by segment X, margin pressure in
-            segment Y, ROE showing capital efficiency.
+            Reveal each KPI slowly to maintain attention and connect to business narrative.
           </aside>
         </section>
 
-        <!-- SLIDE 4: Code sample with syntax highlighting -->
+        <!-- SLIDE 4 — CODE SAMPLE -->
         <section>
-          <h2>Earnings Calculation – Code Sample</h2>
-          <pre>
-<code class="language-python" data-line-numbers="1-4|6-10|12-14">
+          <h2>Earnings Calculation — Code Sample</h2>
+          <pre><code class="language-python" data-line-numbers="1-4|6-10|12-14">
 import pandas as pd
 
-# Quarterly revenue and expenses (simplified)
+# Quarterly revenue and expenses
 df = pd.DataFrame({
     "quarter": ["Q1", "Q2"],
     "revenue": [1_100_000_000, 1_250_000_000],
@@ -126,72 +95,58 @@ df = pd.DataFrame({
 df["net_income"] = df["revenue"] - df["expense"]
 df["net_margin"] = df["net_income"] / df["revenue"]
 
-# EPS calculation (simplified)
+# EPS calculation
 shares_outstanding = 145_000_000
 df["eps"] = df["net_income"] / shares_outstanding
 
 print(df)
-</code>
-          </pre>
+          </code></pre>
 
           <aside class="notes">
-            Explain that this is a simplified example of how the reported
-            earnings are derived. Emphasize that the real model would be more
-            granular, but the logic is transparent and reproducible.
+            Emphasize transparency — numbers come from reproducible computation, not hand-crafted slides.
           </aside>
         </section>
 
-        <!-- SLIDE 5: Math equations (financial formulas) -->
+        <!-- SLIDE 5 — MATH EQUATIONS -->
         <section>
-          <h2>Key Financial Formulas</h2>
+          <h2>Financial Formulas</h2>
 
-          <p>Net Income:</p>
-          <p>
-            \[
+          \[
               \text{Net Income} = \text{Revenue} - \text{Expenses}
-            \]
-          </p>
+          \]
 
-          <p>Earnings Per Share (EPS):</p>
-          <p>
-            \[
+          \[
               \text{EPS} = \frac{\text{Net Income}}{\text{Shares Outstanding}}
-            \]
-          </p>
+          \]
 
-          <p>Return on Equity (ROE):</p>
-          <p>
-            \[
-              \text{ROE} = \frac{\text{Net Income}}{\text{Average Shareholders' Equity}}
-            \]
-          </p>
+          \[
+              \text{ROE} = \frac{\text{Net Income}}{\text{Average Shareholder Equity}}
+          \]
 
           <aside class="notes">
-            Connect each formula to the reported numbers. Make it clear that all
-            KPIs can be traced back to standard, auditable financial equations.
+            Tie formulas to the computed KPIs and explain importance to investors.
           </aside>
         </section>
 
-        <!-- SLIDE 6: Dummy interactive placeholder -->
+        <!-- SLIDE 6 — PLACEHOLDER FOR FUTURE INTERACTIVE CHART -->
         <section id="revenue-slide">
           <h2>Interactive Revenue Visualization</h2>
-          <div id="revenue-chart" style="width: 80%; height: 350px; border: 1px dashed #999; display: flex; align-items: center; justify-content: center;">
-            <span>Interactive chart placeholder (connect D3/Plotly here)</span>
+          <div id="revenue-chart" style="width:80%;height:350px;border:1px dashed #999;display:flex;justify-content:center;align-items:center;">
+            Interactive chart placeholder — ready for D3/Plotly/Observable integration
           </div>
 
           <aside class="notes">
-            Make it explicit that this placeholder can be wired to D3/Plotly or
-            any internal data API for live dashboards in future iterations.
+            Mention this slide can later connect to API for real-time dashboards.
           </aside>
         </section>
 
       </div>
     </div>
 
-    <!-- RevealJS core script -->
+    <!-- RevealJS core -->
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
 
-    <!-- Plugins: Markdown, Highlight, Math, Notes -->
+    <!-- Plugins -->
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
@@ -202,29 +157,21 @@ print(df)
         width: 1280,
         height: 720,
         margin: 0.04,
-
+        center: true,
         controls: true,
         progress: true,
         history: true,
-        center: true,
         transition: "slide",
-
-        // Enable fragments, Markdown, code highlighting, math, notes
         plugins: [RevealMarkdown, RevealHighlight, RevealMath, RevealNotes],
-
         math: {
-          // Use MathJax 3 (default config)
-          mathjax:
-            "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+          mathjax: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
           config: "TeX-AMS_HTML"
         }
       });
 
-      // Example: run something when revenue slide is shown
       Reveal.addEventListener("slidechanged", function (event) {
         if (event.currentSlide.id === "revenue-slide") {
-          // In a real setup, trigger chart rendering here
-          console.log("Revenue slide active – initialize chart here.");
+          console.log("Revenue slide triggered — chart rendering goes here");
         }
       });
     </script>
